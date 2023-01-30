@@ -1,0 +1,36 @@
+image: node:12-slim
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - ./node_modules
+
+build:
+  stage: build
+  script:
+    - npm install
+    - ./node_modules/gulp/bin/gulp.js build
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - public
+  only:
+    - main
+
+pages:
+  stage: deploy
+  environment:
+    name: staging
+    url: https://$CI_PROJECT_NAMESPACE.pages.twogether.io/$CI_PROJECT_NAME/
+  script:
+    - echo "Deploying to pages..."
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

@@ -1,0 +1,5 @@
+{
+  "pageTitle": "REF003-006",
+  "layout": "layouts/base.twig",
+  "stylesheet": "css/main.min.css"
+}

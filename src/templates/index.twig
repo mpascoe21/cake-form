@@ -1,0 +1,73 @@
+{% extends layout %}
+
+{% block body %}
+  <header class="slider">
+    <div class="slider-wrap">
+      <div class="slide slide-01">
+        <div class="bg-img bg-img-01"></div>
+      </div>
+      <div class="slide slide-02">
+        <div class="bg-img bg-img-02"></div>
+      </div>
+      <div class="slide slide-03">
+        <div class="bg-img bg-img-03"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="employee-details">
+      <h4>Employee Details Form:</h4>
+      <form class="form" action="">
+        <input id="name" placeholder="Employee Name" type="text">
+        <input id="dob" placeholder="Employee Date of Birth" type="date">
+        <button class="form-btn" type="button"><img src="../images/icon-plus.png" alt=""></button>
+      </form>
+    </section>
+    <section class="data-container">
+      <div class="data-header">
+        <p>Employee Name</p>
+        <p>Date of Birth</p>
+        <p>Date of Cake</p>
+        <p>Size of Cake</p>
+      </div>
+      <div class="data">
+        <ul class="data-list"></ul>
+      </div>
+    </section>
+
+{#    <section>#}
+{#      <table>#}
+{#        <tr>#}
+{#          <th>Employee Name</th>#}
+{#          <th>Date of Birth</th>#}
+{#          <th>Date of Cake</th>#}
+{#          <th>Size of Cake</th>#}
+{#        </tr>#}
+{#      </table>#}
+{#    </section>#}
+
+    <section class="pie-chart">
+      cake pie chart
+    </section>
+
+    <section class="test">
+      <div class="test-slider" data-slick='{"slidesToShow": 2, "slidesToScroll": 2}'>
+        <div class="test-slide"><h3>1</h3></div>
+        <div class="test-slide"><h3>2</h3></div>
+        <div class="test-slide"><h3>3</h3></div>
+        <div class="test-slide"><h3>4</h3></div>
+        <div class="test-slide"><h3>5</h3></div>
+        <div class="test-slide"><h3>6</h3></div>
+      </div>
+    </section>
+
+
+  </main>
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="js/app.min.js"></script>
+  <script type="text/javascript" src="/js/flot/jquery.flot.js"></script>
+  <script type="text/javascript" src="/js/flot/jquery.flot.pie.js"></script>
+  <link type="text/css" rel="stylesheet" href="{{ stylesheet }}">
+{% endblock %}

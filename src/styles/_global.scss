@@ -1,0 +1,86 @@
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family;
+  min-width: 320px;
+  height: 100%;
+  background-color: $color-nearly-white;
+}
+
+main {
+
+}
+
+label,
+input {
+  display: block;
+}
+
+a {
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  margin: 18px 0 30px;
+  padding: 12px 30px;
+  background-color: $color-blue;
+  color: $color-white;
+  border: none;
+  font-size: 16px;
+  width: fit-content;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-black;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin: 18px 0 40px;
+  }
+
+  @media screen and (min-width: $large-desktop) {
+    margin: 18px 0 81px;
+  }
+}
+
+.x-btn {
+  width: fit-content;
+  grid-area: 1 / 2 / 2 / 3;
+  cursor: pointer;
+  &:after {
+    position: relative;
+    top: 2px;
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-left: 3px;
+    border: 2px solid transparent;
+    border-top-color: $color-black;
+    border-left-color: $color-black;
+    transform: rotate(135deg);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.invalid {
+  border: none;
+  outline: 1px solid $color-red;
+}
